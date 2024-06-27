@@ -14,9 +14,9 @@ char* mystrcpy(char* str1, const char* str2)
 
 int main()
 {
-    char str2[] = "hello world!";
+    const char str2[] = "hello world!";
     char str1;
-	cout << mystrcpy(str2) << endl;
+	cout << mystrcpy(str1, str2) << endl;
 
     system("pause");
     return 0;
