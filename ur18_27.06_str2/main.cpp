@@ -2,19 +2,22 @@
 using namespace std;
 
 
-int mystrlen(const char* str1) 
+char* mystrcpy(char* str1, const char* str2)
 {
-    int len = 0;
-    while (str1[len] != '\0') {
-        len++;
-    }
-    return len;
+	for (size_t i = 0; str2[i] != '\0'; i++)
+	{
+		str1[i] == str2[i];
+		
+	}
+	return str1;
 }
 
 int main()
 {
-    char str1[] = "hello world!";
-    cout << "amount of symbols in str = " << mystrlen(str1) << endl;
+    char str2[] = "hello world!";
+    char str1;
+	cout << mystrcpy(str2) << endl;
+
     system("pause");
     return 0;
 }
