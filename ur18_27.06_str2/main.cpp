@@ -2,21 +2,23 @@
 using namespace std;
 
 
-char* mystrcpy(char* str1, const char* str2) 
-{
-    char* res = str1;
-
-    while ((*str1++ = *str2++) != '\0');
-    cout << str1 << endl;
-    return res;
+char* mystrcpy(char* str1, const char* str2) {
+    int i = 0;
+    while (str2[i] != '\0') {
+        str1[i] = str2[i];
+        ++i;
+    }
+    str1[i] = '\0';
+    return str1;
 }
 
 int main()
 {
-    const char str2[] = "hello world!";
-    char str1;
+    char str1[100];
+    char str2[] = "Hello world";
 	
-    cout << " " << mystrcpy(str1, str2) << endl;
+    mystrcpy(str1, str2);
+    cout << str1 << endl;
     system("pause");
     return 0;
 }
